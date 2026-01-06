@@ -2,12 +2,26 @@
 
 namespace Modules\Default;
 
+use Pano\Core\BaseLogger;
 use Pano\Core\BaseModule;
 use Pano\Core\BaseRouter;
+use Pano\Core\BaseView;
+use Pano\Foundation\Logger;
 use Pano\Foundation\Router;
+use Pano\Foundation\View;
 
 readonly class DefaultModule extends BaseModule
 {
+    protected function view(): BaseView
+    {
+        return new View($this->viewBasePath());
+    }
+
+    protected function log(): BaseLogger
+    {
+        return new Logger($this->logsBasePath());
+    }
+
     public function routes(): BaseRouter
     {
         $router = new Router($this->request);

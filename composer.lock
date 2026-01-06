@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "simcript/pano",
-            "version": "v1.1.4",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simcript/pano.git",
-                "reference": "80195f94ad359461227bf4160126a113065c2a83"
+                "reference": "d2806a30cf7c209d025326c2113d7a5f4b3048d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simcript/pano/zipball/80195f94ad359461227bf4160126a113065c2a83",
-                "reference": "80195f94ad359461227bf4160126a113065c2a83",
+                "url": "https://api.github.com/repos/simcript/pano/zipball/d2806a30cf7c209d025326c2113d7a5f4b3048d9",
+                "reference": "d2806a30cf7c209d025326c2113d7a5f4b3048d9",
                 "shasum": ""
             },
             "require": {
@@ -38,9 +38,9 @@
             ],
             "description": "PHP nano framework",
             "support": {
-                "source": "https://github.com/simcript/pano/tree/v1.1.4"
+                "source": "https://github.com/simcript/pano/tree/v1.1.6"
             },
-            "time": "2026-01-05T21:15:09+00:00"
+            "time": "2026-01-06T21:17:49+00:00"
         }
     ],
     "packages-dev": [
