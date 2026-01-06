@@ -6,7 +6,7 @@ use Pano\Core\BaseModule;
 use Pano\Core\BaseRouter;
 use Pano\Foundation\Router;
 
-final readonly class DefaultModule extends BaseModule
+readonly class DefaultModule extends BaseModule
 {
     public function routes(): BaseRouter
     {
@@ -18,7 +18,9 @@ final readonly class DefaultModule extends BaseModule
 
     public function info(): void
     {
-        echo 'Pano a php nano framework';
+        $this->view()
+            ->with(['name' => 'Pano'])
+            ->layout('layout')
+            ->render('home');
     }
-
 }
