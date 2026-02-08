@@ -1,40 +1,40 @@
 <?php
 
+
 namespace Modules\Default;
 
 use Pano\Core\BaseLogger;
 use Pano\Core\BaseModule;
 use Pano\Core\BaseRouter;
 use Pano\Core\BaseView;
+use Pano\Foundation\Exception;
 use Pano\Foundation\Logger;
-use Pano\Foundation\Router;
 use Pano\Foundation\View;
+use Modules\Default\Commands\DefaultCommand;
+use Modules\Default\Handlers\DefaultHandler;
+use Modules\Default\Interceptors\DefaultInterceptor;
 
-readonly class DefaultModule extends BaseModule
+final readonly class DefaultModule extends BaseModule
 {
-    protected function view(): BaseView
-    {
-        return new View($this->viewBasePath());
-    }
-
-    protected function log(): BaseLogger
-    {
-        return new Logger($this->logsBasePath());
-    }
-
+    /**
+     * @throws Exception
+     */
     public function routes(): BaseRouter
     {
-        $router = new Router($this->request);
-        $router->get('/', fn() => $this->info());
+        $this->router->get('/', DefaultHandler::class, 'info', [DefaultInterceptor::class]);
+        $this->router->command('app:info', DefaultCommand::class);
 
-        return $router;
+        return $this->router;
     }
 
-    public function info(): void
+    public function view(): BaseView
     {
-        $this->view()
-            ->with(['name' => 'Pano'])
-            ->layout('layout')
-            ->render('home');
+        return new View($this->viewPath());
     }
+
+    public function log(): BaseLogger
+    {
+        return new Logger($this->logPath());
+    }
+
 }

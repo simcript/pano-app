@@ -15,6 +15,6 @@ Welcome | Pano
     </p>
 
     <div class="footer">
-        <?= date("Y") ?> &copy; Powered by <span><a href="https://simcript.github.io/pano">Pano</a> </span>
+        <?= date("Y") ?> &copy; Powered by <span><a href="https://simcript.github.io/pano"><?= $name ?></a><small> <?= $version ?></small> </span>
     </div>
 </div>
