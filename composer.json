@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=8.2",
-    "simcript/pano": "^1.0"
+    "simcript/pano-framework": "^1.0"
   },
   "autoload": {
     "psr-4": {
