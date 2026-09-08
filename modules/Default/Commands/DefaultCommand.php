@@ -11,7 +11,7 @@ class DefaultCommand extends BaseCommand
 
     public function handle(array $arguments): ResultCodeEnum
     {
-        $version = InstalledVersions::getPrettyVersion('simcript/pano') ?? 'dev';
+        $version = InstalledVersions::getPrettyVersion('pano-php/pano') ?? 'dev';
         $this->info(env('APP_NAME', 'Pano') . " - " . $version);
         return ResultCodeEnum::OK;
     }

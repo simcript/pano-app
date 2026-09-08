@@ -12,7 +12,7 @@ final class DefaultHandler extends BaseHandler
 
     public function info(): Response
     {
-        $version = InstalledVersions::getPrettyVersion('simcript/pano') ?? 'dev';
+        $version = InstalledVersions::getPrettyVersion('pano-php/pano') ?? 'dev';
 
         return Response::html(
             $this->module->view()

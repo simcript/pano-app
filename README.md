@@ -1,7 +1,7 @@
 # Pano Application Skeleton
 
 A minimal, ready-to-run application skeleton built on top of the
-**[Pano](https://github.com/simcript/pano-framework)** nano-framework.
+**[Pano](https://github.com/pano-php/pano-framework)** nano-framework.
 
 Pano is a lightweight PHP runtime that gives you an explicit, predictable
 foundation with **full architectural control**. This skeleton wires up that
@@ -27,14 +27,14 @@ immediately.
 Create a new project with Composer:
 
 ```bash
-composer create-project simcript/pano my-app
+composer create-project pano-php/pano my-app
 cd my-app
 ```
 
 Or clone this repository and install dependencies manually:
 
 ```bash
-git clone https://github.com/simcript/pano.git my-app
+git clone https://github.com/pano-php/pano.git my-app
 cd my-app
 composer install
 ```
@@ -1007,10 +1007,10 @@ php -S localhost:8000 -t public
 
 ## Learn More
 
-- **Framework source & docs:** [simcript/pano-framework](https://github.com/simcript/pano-framework)
-- **Full developer guide:** [DOCUMENTATION.md](https://github.com/simcript/pano-framework/blob/main/DOCUMENTATION.md)
-- **Architecture:** [ARCHITECTURE.md](https://github.com/simcript/pano-framework/blob/main/ARCHITECTURE.md)
-- **Philosophy:** [MANIFESTO.md](https://github.com/simcript/pano-framework/blob/main/MANIFESTO.md)
+- **Framework source & docs:** [pano-php/pano-framework](https://github.com/pano-php/pano-framework)
+- **Full developer guide:** [DOCUMENTATION.md](https://github.com/pano-php/pano-framework/blob/main/DOCUMENTATION.md)
+- **Architecture:** [ARCHITECTURE.md](https://github.com/pano-php/pano-framework/blob/main/ARCHITECTURE.md)
+- **Philosophy:** [MANIFESTO.md](https://github.com/pano-php/pano-framework/blob/main/MANIFESTO.md)
 
 Pano is deliberately unopinionated — you bring the architecture. The framework
 should never make decisions on your behalf.
